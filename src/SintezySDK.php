@@ -264,6 +264,23 @@ class SintezySDK
     }
 
     // ============================================================
+    // SUBSCRIPTION STATUS (ASSINATURA)
+    // ============================================================
+
+    /**
+     * Consulta o status da assinatura de um email.
+     * Disponível apenas para API Keys do tipo unauthenticated (reseller).
+     *
+     * @param string $email Email do usuário a consultar
+     * @return array Status da assinatura (email, hasSubscription, status?, planType?, endDate?, checkoutUrl?)
+     * @throws SintezySDKException
+     */
+    public function getSubscriptionStatus(string $email): array
+    {
+        return $this->request('GET', '/sdk/subscription-status?email=' . urlencode($email));
+    }
+
+    // ============================================================
     // DOCUMENTOS
     // ============================================================
 
