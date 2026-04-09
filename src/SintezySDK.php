@@ -264,6 +264,22 @@ class SintezySDK
     }
 
     // ============================================================
+    // TRANSCRIPTION (TRANSCRIÇÃO)
+    // ============================================================
+
+    /**
+     * Busca a transcrição de uma consulta.
+     *
+     * @param string $appointmentId ID seguro da consulta
+     * @return array Transcrição (secureId, transcription, recordedTimeSeconds?, status)
+     * @throws SintezySDKException
+     */
+    public function getTranscription(string $appointmentId): array
+    {
+        return $this->request('GET', "/sdk/appointments/{$appointmentId}/transcription");
+    }
+
+    // ============================================================
     // SUBSCRIPTION STATUS (ASSINATURA)
     // ============================================================
 
