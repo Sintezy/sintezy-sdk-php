@@ -229,6 +229,8 @@ class SintezySDK
      *                      - userEmail: Email do usuário (obrigatório)
      *                      - userName: Nome do usuário (obrigatório)
      *                      - layout: Layout da consulta (obrigatório)
+     *                      - redirectUrl: URL de redirecionamento após geração do documento (opcional).
+     *                        Se fornecida, o portal redireciona para esta URL ao invés de fechar a janela.
      * @return Appointment
      * @throws SintezySDKException
      */
