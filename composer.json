@@ -1,7 +1,7 @@
 {
     "name": "sintezy/sdk",
     "description": "SDK oficial para integração com a plataforma Sintezy",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "type": "library",
     "license": "MIT",
     "authors": [
